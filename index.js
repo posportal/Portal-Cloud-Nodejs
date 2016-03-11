@@ -4,6 +4,6 @@ function init(key, secret, sandbox){
     return new Client(key, secret, sandbox);
 };
 
-init.Client = Client;
+init.client = Client;
 
 module.exports = init;
