@@ -6,9 +6,8 @@ module.exports = function(client){
     function Product(id){
         var id_resources = {},
             url = RESOURCE_URL + "/" + id;
-        endpoints.create(client, id_resources, ["GET"], url);
 
-        id_resources.application = require('./Subresource/Application')(client, url);
+        id_resources.application = endpoints.create(client, id_resources, ["GET"], url + "/application");
 
         return id_resources;
     };
