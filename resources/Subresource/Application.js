@@ -1,4 +1,4 @@
-var endpoints = require('../lib/endpoints');
+var endpoints = require('../../lib/endpoints');
 const RESOURCE_URL = "/application";
 
 //SUB RESOURCE, THIS CANNOT BE CALLED WITHOUT PRODUCT

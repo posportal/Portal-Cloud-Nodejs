@@ -8,7 +8,7 @@ module.exports = function(client){
             url = RESOURCE_URL + "/" + id;
         endpoints.create(client, id_resources, ["GET"], url);
 
-        id_resources.application = require('./Application')(client, url);
+        id_resources.application = require('./Subresource/Application')(client, url);
 
         return id_resources;
     };
