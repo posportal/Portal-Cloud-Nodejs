@@ -20,7 +20,7 @@ module.exports = function(client){
 
         //Link order sub resources
         id_resources.status = require("./Subresource/Status")(client, url);
-        id_resources.orderitem = require("./Subresource/OrderItem")(client, url);
+        id_resources.item = require("./Subresource/OrderItem")(client, url);
 
         //Generate order unique sub resources
         id_resources.backorder = {};
@@ -34,7 +34,10 @@ module.exports = function(client){
         return id_resources;
     };
 
+    Order.status = require("./Subresource/DataStatus")(client, RESOURCE_URL);
+
     endpoints.create(client, Order, ["GET", "POST"], RESOURCE_URL);
+
 
     return Order;
 };

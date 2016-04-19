@@ -7,7 +7,11 @@ module.exports = function(client){
         var id_resources = {},
             url = RESOURCE_URL + "/" + id;
 
-        id_resources.application = endpoints.create(client, id_resources, ["GET"], url + "/application");
+        endpoints.create(client, id_resources, ["GET"], url);
+
+        id_resources.application = {};
+
+        endpoints.create(client, id_resources.application, ["GET"], url + "/application");
 
         return id_resources;
     };

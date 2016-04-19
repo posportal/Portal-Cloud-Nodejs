@@ -18,12 +18,12 @@ module.exports = function(client){
         endpoints.create(client, id_resources, ["GET", "PATCH", "DELETE"], url);
 
         //Generate merchant specific sub resources
-        id_resources.installedEquipment = {};
-        id_resources.installedEquipment.return = {};
+        id_resources.installedequipment = {};
+        id_resources.installedequipment.return = {};
         id_resources.orders = {};
 
-        endpoints.create(client, id_resources.installedEquipment, ["GET"], url + "/installedequipment");
-        endpoints.create(client, id_resources.installedEquipment.return, ["POST"], url + "/installedequipment/return");
+        endpoints.create(client, id_resources.installedequipment, ["GET"], url + "/installedequipment");
+        endpoints.create(client, id_resources.installedequipment.return, ["POST"], url + "/installedequipment/return");
         endpoints.create(client, id_resources.orders, ["GET"], url + "/orders");
 
         return id_resources;
