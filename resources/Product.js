@@ -12,11 +12,13 @@ module.exports = function(client){
         id_resources.application = {};
 
         endpoints.create(client, id_resources.application, ["GET"], url + "/application");
+        id_resources.application.list = id_resources.application.get;
 
         return id_resources;
     };
 
     endpoints.create(client, Product, ["GET"], RESOURCE_URL);
+    Product.list = Product.get;
 
     return Product;
 };

@@ -7,6 +7,7 @@ module.exports = function (client, parentUrl){
 
 
     endpoints.create(client, resources, ["GET", "PATCH"], url);
+    resources.update = resources.patch;
 
     return resources;
 };

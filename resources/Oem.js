@@ -12,6 +12,7 @@ module.exports = function(client){
     };
 
     endpoints.create(client, Oem, ["GET"], RESOURCE_URL);
+    Oem.list = Oem.get;
 
     return Oem;
 };

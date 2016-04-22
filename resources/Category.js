@@ -19,6 +19,7 @@ module.exports = function(client){
 
     //create any general resources available.
     endpoints.create(client, Category, ["GET"], RESOURCE_URL);
+    Category.list = Category.get;
 
     return Category;
 };

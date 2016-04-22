@@ -15,6 +15,7 @@ module.exports = function (client, parentUrl){
     };
 
     endpoints.create(client, DataStatus, ["GET"], url);
+    DataStatus.list = DataStatus.get;
 
     return DataStatus;
 };

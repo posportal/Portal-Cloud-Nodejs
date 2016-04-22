@@ -17,6 +17,7 @@ module.exports = function(client){
 
         //generate order by ID resources
         endpoints.create(client, id_resources, ["GET", "PATCH"], url);
+        id_resources.update = id_resources.patch;
 
         id_resources.followup = require("./Subresource/ticketfollowup")(client, url);
 
@@ -27,6 +28,8 @@ module.exports = function(client){
 
 
     endpoints.create(client, Ticket, ["GET", "POST"], RESOURCE_URL);
+    Ticket.list = Ticket.get;
+    Ticket.create = Ticket.post;
 
 
     return Ticket;

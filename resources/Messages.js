@@ -6,6 +6,7 @@ module.exports = function(client){
     var resources = {};
 
     endpoints.create(client, resources, ["GET"], RESOURCE_URL);
+    resources.list = resources.get;
 
     return resources;
 };/**

@@ -7,6 +7,7 @@ module.exports = function(client){
     resources.reasons = {};
 
     endpoints.create(client, resources.reasons, ["GET"], RESOURCE_URL + "/reasons");
+    resources.reasons.list = resources.reasons.get;
 
     return resources;
 };/**
