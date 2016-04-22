@@ -17,6 +17,8 @@ module.exports = function(client){
 
         //generate order by ID resources
         endpoints.create(client, id_resources, ["GET", "PATCH", "DELETE"], url);
+        id_resources.update = id_resources.patch;
+        id_resources.delete = id_resources.delete;
 
         //Link order sub resources
         id_resources.status = require("./Subresource/Status")(client, url);
@@ -37,6 +39,8 @@ module.exports = function(client){
     Order.status = require("./Subresource/DataStatus")(client, RESOURCE_URL);
 
     endpoints.create(client, Order, ["GET", "POST"], RESOURCE_URL);
+    Order.create = Order.post;
+    Order.list = Order.get;
 
 
     return Order;
