@@ -1,5 +1,5 @@
 var endpoints = require('../lib/endpoints');
-const RESOURCE_URL = "/deploymentproject";
+const RESOURCE_URL = "/deploymentProject";
 
 module.exports = function(client){
 
