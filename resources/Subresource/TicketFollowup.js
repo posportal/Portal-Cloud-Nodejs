@@ -7,7 +7,7 @@ module.exports = function(client, parentUrl){
 
     function TicketFollowup(id){
         var id_resources = {};
-        var url = parentUrl + RESOURCE_URL + id;
+        var url = parentUrl + RESOURCE_URL + "/" + id;
 
         endpoints.create(client, id_resources, ["GET", "PATCH"], url);
         id_resources.update = id_resources.patch;
