@@ -7,7 +7,7 @@ module.exports = function (client, parentUrl){
     function DataStatus(id){
 
         var id_resources = {};
-        var url = parentUrl + RESOURCE_URL + id;
+        var url = parentUrl + RESOURCE_URL + "/" + id;
 
         endpoints.create(client, id_resources, ["GET"], url);
 
