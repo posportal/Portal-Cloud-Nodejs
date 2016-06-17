@@ -1,6 +1,6 @@
 # Portal Cloud Nodejs Client
-This client is intended to interact with Portal Cloud in a seamless manner. We handle all the request handling, leaving
-you will the simplest way to access your data and create orders.
+This client is intended to interact with Portal Cloud in a seamless manner. We handle all of gears and sprockets in the request, leaving
+you will the simplest way to achieve order zen.
 
 ## How to Initialize Your Portal Cloud Client
 Download the client first, then wherever in your NodeJs app, include the package like so.
