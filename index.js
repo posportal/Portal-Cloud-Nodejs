@@ -1,7 +1,7 @@
 var Client = require('./lib/Client');
 
-function init(key, secret, sandbox){
-    return new Client(key, secret, sandbox);
+function init(key, secret, env){
+    return new Client(key, secret, env);
 };
 
 init.client = Client;
